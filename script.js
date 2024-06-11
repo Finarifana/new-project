@@ -12,28 +12,35 @@ document.getElementById('calculator-form').addEventListener('submit', function(e
     let hasil;
     let valid = true;
 
-    switch (operasi) {
-        case '+':
-            hasil = bilangan1 + bilangan2;
-            break;
-        case '-':
-            hasil = bilangan1 - bilangan2;
-            break;
-        case '*':
-            hasil = bilangan1 * bilangan2;
-            break;
-        case '/':
-            if (bilangan2 !== 0) {
-                hasil = bilangan1 / bilangan2;
-            } else {
-                alert("Error: Pembagian dengan nol tidak diperbolehkan.");
+    if (isNaN(bilangan1) || isNaN(bilangan2)) {
+        alert("Input tidak valid untuk basis yang diberikan.");
+        valid = false;
+    }
+
+    if (valid) {
+        switch (operasi) {
+            case '+':
+                hasil = bilangan1 + bilangan2;
+                break;
+            case '-':
+                hasil = bilangan1 - bilangan2;
+                break;
+            case '*':
+                hasil = bilangan1 * bilangan2;
+                break;
+            case '/':
+                if (bilangan2 !== 0) {
+                    hasil = bilangan1 / bilangan2;
+                } else {
+                    alert("Error: Pembagian dengan nol tidak diperbolehkan.");
+                    valid = false;
+                }
+                break;
+            default:
+                alert("Operasi tidak valid.");
                 valid = false;
-            }
-            break;
-        default:
-            alert("Operasi tidak valid.");
-            valid = false;
-            break;
+                break;
+        }
     }
 
     if (valid) {
