@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Base Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Number Base Calculator</h1>
+        <div class="instructions">
+            <p>====================================================================</p>
+            <p>2 untuk biner, 8 untuk oktal, 10 untuk desimal, 16 untuk hexadesimal</p>
+            <p>Simbol operasi: + (tambah), - (kurang), * (kali), / (bagi)</p>
+            <p>====================================================================</p>
+        </div>
+        <form id="calculator-form">
+            <div class="input-group">
+                <label for="input1">Masukkan bilangan pertama:</label>
+                <input type="text" id="input1" required>
+            </div>
+            <div class="input-group">
+                <label for="basis1">Masukkan basis bilangan pertama:</label>
+                <input type="number" id="basis1" required>
+            </div>
+            <div class="input-group">
+                <label for="input2">Masukkan bilangan kedua:</label>
+                <input type="text" id="input2" required>
+            </div>
+            <div class="input-group">
+                <label for="basis2">Masukkan basis bilangan kedua:</label>
+                <input type="number" id="basis2" required>
+            </div>
+            <div class="input-group">
+                <label for="operasi">Pilih operasi:</label>
+                <input type="text" id="operasi" required>
+            </div>
+            <button type="submit">Hitung</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
